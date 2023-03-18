@@ -11,5 +11,6 @@ window.addEventListener( 'load', () => {
 	const Wrapper = () => {
 		return <div>TODO implement frontend ui</div>;
 	};
+
 	render( <Wrapper />, container );
 } );
