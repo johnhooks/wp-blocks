@@ -31,7 +31,7 @@ declare module '@wordpress/block-editor' {
 			 * Callback called before to start to upload the files. It receives an array
 			 * with the files to upload before to the final process.
 			 */
-			onFilesUpload: (files: File[]) => void;
+			onFilesUpload?: (files: File[]) => void;
 
 			/**
 			 * Callback used when media is replaced from the Media Library or when a new

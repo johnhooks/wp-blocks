@@ -12,7 +12,7 @@ import type { Props } from './types';
  *
  * @param props            - The block save props.
  * @param props.attributes
- * @return Element to render.
+ * @returns Element to render.
  */
 export default function save( {
 	attributes,

@@ -1,5 +1,5 @@
 declare module '@wordpress/blob' {
-	export * from '@wordpress/blob';
+	// export * from '@wordpress/blob';
 
 	// The problem with the originals was the `url` parameter wasn't typed as possibly
 	// `undefined` but that is how the functions are used, and also how they are implemented.

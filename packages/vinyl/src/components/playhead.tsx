@@ -1,11 +1,12 @@
 import { useRef } from '@wordpress/element';
+import type { MutableRefObject } from 'react';
 import {
 	mergeProps,
 	useSliderThumb,
 	VisuallyHidden,
 	type FocusProps,
 } from 'react-aria';
-import type { SliderState } from 'react-state';
+import type { SliderState } from 'react-stately';
 
 interface Props {
 	/**
@@ -34,6 +35,16 @@ interface Props {
 	 *
 	 */
 	index: number;
+
+	/**
+	 *
+	 */
+	state: SliderState;
+
+	/**
+	 *
+	 */
+	trackRef: MutableRefObject< HTMLElement >;
 }
 
 export function Playhead( props: Props ) {

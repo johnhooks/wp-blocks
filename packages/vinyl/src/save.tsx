@@ -1,11 +1,7 @@
 /**
  * WordPress dependencies
  */
-import {
-	RichText,
-	useBlockProps,
-	__experimentalGetElementClassName,
-} from '@wordpress/block-editor';
+import { RichText, useBlockProps } from '@wordpress/block-editor';
 
 export default function save( { attributes } ) {
 	const { autoplay, caption, loop, preload, src } = attributes;
@@ -24,9 +20,7 @@ export default function save( { attributes } ) {
 					<RichText.Content
 						tagName="figcaption"
 						value={ caption }
-						className={ __experimentalGetElementClassName(
-							'caption'
-						) }
+						className="wp-blocks-vinyl__caption"
 					/>
 				) }
 			</figure>

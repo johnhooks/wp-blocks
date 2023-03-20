@@ -15,6 +15,7 @@ importers:
       '@types/node': ^14.18.38
       '@typescript-eslint/eslint-plugin': ^5.55.0
       '@typescript-eslint/parser': ^5.55.0
+      '@wordpress/blob': 3.27.0
       '@wordpress/block-editor': 11.4.0
       '@wordpress/block-library': 8.4.0
       '@wordpress/components': 23.4.0
@@ -61,6 +62,7 @@ importers:
       '@types/node': 14.18.38
       '@typescript-eslint/eslint-plugin': 5.55.0_ffn2sqnefbgfhdrixzvbbpw6bq
       '@typescript-eslint/parser': 5.55.0_qxbo2xm47qt6fxnlmgbosp4hva
+      '@wordpress/blob': 3.27.0
       '@wordpress/block-editor': 11.4.0_biqbaboplfbrettd7655fr4n2y
       '@wordpress/block-library': 8.4.0_biqbaboplfbrettd7655fr4n2y
       '@wordpress/components': 23.4.0_biqbaboplfbrettd7655fr4n2y
@@ -117,12 +119,10 @@ importers:
 
   packages/types:
     specifiers:
-      '@types/wordpress__blob': ^2.8.0
       '@types/wordpress__block-editor': ^11.0.1
       '@types/wordpress__block-library': ^2.6.1
       '@types/wordpress__blocks': ^12.0.3
     dependencies:
-      '@types/wordpress__blob': 2.8.0
       '@types/wordpress__block-editor': 11.0.1
       '@types/wordpress__block-library': 2.6.1
       '@types/wordpress__blocks': 12.0.3
@@ -4274,13 +4274,6 @@ packages:
       source-map: 0.6.1
     dev: false
 
-  /@types/wordpress__blob/2.8.0:
-    resolution: {integrity: sha512-woon7jOKcK9w9G+K0RYdDCK/7QdbSZ3aFpP2nvUJahCtqEnR/ZNsCdxUoZ91PfNtM7c8CVEy2qxGmf6AjKJUgg==}
-    deprecated: This is a stub types definition. wordpress__blob provides its own type definitions, so you do not need this installed.
-    dependencies:
-      '@wordpress/blob': 3.29.0
-    dev: false
-
   /@types/wordpress__block-editor/11.0.1:
     resolution: {integrity: sha512-nGlo4ncu95rR+t1I6jca7ugTk+yJJheSBl8nmtkRFZJXfytb5SfEddywvI7TWkMVyjzDhFQcKQ7wIDomTTh3KQ==}
     dependencies:
@@ -4727,6 +4720,13 @@ packages:
 
   /@wordpress/base-styles/4.20.0:
     resolution: {integrity: sha512-fponv/evJBzQ8Ggh5Cj+46b7j4Y/SaM08usdRaA6Bw2W8ezYDD7gQTLImH5CDD/vhXRLnDiGflFOym8eZFaU7w==}
+    dev: false
+
+  /@wordpress/blob/3.27.0:
+    resolution: {integrity: sha512-yBbPqYIFcVfJ2UJ9V39hdz6R4vGWgACBWaGc0e1Kya0AFkxFk0WAOoFC7Oz1oCPt2GS+TltGL+dY2awgyVUn4g==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@babel/runtime': 7.21.0
     dev: false
 
   /@wordpress/blob/3.29.0:

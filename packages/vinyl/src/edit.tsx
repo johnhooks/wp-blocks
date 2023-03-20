@@ -113,7 +113,7 @@ function VinylEdit( {
 		}
 	}
 
-	const { createErrorNotice } = useDispatch( noticesStore );
+	const { createErrorNotice } = useDispatch( noticesStore as any );
 	function onUploadError( message: string ) {
 		createErrorNotice( message, { type: 'snackbar' } );
 	}
@@ -155,7 +155,7 @@ function VinylEdit( {
 					onSelectURL={ onSelectURL }
 					accept="audio/*"
 					allowedTypes={ ALLOWED_MEDIA_TYPES }
-					value={ attributes }
+					value={ attributes as any }
 					onError={ onUploadError }
 				/>
 			</div>
@@ -164,7 +164,7 @@ function VinylEdit( {
 
 	return (
 		<>
-			<BlockControls group="block">
+			<BlockControls>
 				<ToolbarButton
 					onClick={ () => {
 						setShowCaption( ! showCaption );
@@ -181,7 +181,7 @@ function VinylEdit( {
 					}
 				/>
 			</BlockControls>
-			<BlockControls group="other">
+			<BlockControls>
 				<MediaReplaceFlow
 					mediaId={ id }
 					mediaURL={ src }
@@ -201,7 +201,7 @@ function VinylEdit( {
 					/>
 					<SelectControl
 						label={ _x( 'Preload', 'noun; Audio block parameter' ) }
-						value={ preload || '' }
+						value={ preload ?? '' }
 						// `undefined` is required for the preload attribute to be unset.
 						onChange={ ( value ) =>
 							setAttributes( {
@@ -235,14 +235,14 @@ function VinylEdit( {
 				) }
 				{ isTemporaryAudio && <Spinner /> }
 				{ showCaption &&
-					( ! RichText.isEmpty( caption ) || isSelected ) && (
+					( ! RichText.isEmpty( caption ?? '' ) || isSelected ) && (
 						<RichText
 							identifier="caption"
 							tagName="figcaption"
-							ref={ captionRef }
+							ref={ captionRef as any }
 							aria-label={ __( 'Audio caption text' ) }
 							placeholder={ __( 'Add caption' ) }
-							value={ caption }
+							value={ caption ?? '' }
 							onChange={ ( value ) =>
 								setAttributes( { caption: value } )
 							}

@@ -16,7 +16,7 @@ import type { Props } from './types';
  * @param props.setAttributes
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
  *
- * @return Element to render.
+ * @returns Element to render.
  */
 export default function Edit( {
 	attributes,

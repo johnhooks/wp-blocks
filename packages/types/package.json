@@ -41,7 +41,6 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@types/wordpress__blob": "^2.8.0",
 		"@types/wordpress__block-editor": "^11.0.1",
 		"@types/wordpress__block-library": "^2.6.1",
 		"@types/wordpress__blocks": "^12.0.3"
